@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 env:
-  IMAGE: techiescamp/infra-image
+  IMAGE: catninjauser/infra-image
   DOCKERFILE: ./Dockerfile
 
 jobs:
@@ -50,7 +50,6 @@ jobs:
           severity: HIGH,CRITICAL
           ignore-unfixed: true
           format: table
-          exit-code: '0'
 
       - name: Login to Docker Hub
         if: ${{ github.event_name == 'push' }}
